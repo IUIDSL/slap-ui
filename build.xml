@@ -1,0 +1,148 @@
+<?xml version="1.0" ?>
+<project name="all" basedir="." default="config">
+  <property environment="env" />
+  <property name="myname" value="Jeremy J Yang" />
+  <property name="org" value="Data2Discovery" />
+  <description>
+	Libraries, apps, and webapps.
+	${myname}, ${org}
+	Note: "ant -Ddebug=true" enables "-Xlint:deprecation".
+  </description>
+
+  <tstamp>
+    <format property="timestamp" pattern="yyyy-MM-dd HH:mm:ss" />
+    <format property="date" pattern="yyyy-MM-dd" />
+    <format property="year" pattern="yyyy" />
+  </tstamp>
+
+  <condition property="isMac">   <equals arg1="${os.name}" arg2="Mac OS X"/> </condition>
+  <condition property="isLinux"> <equals arg1="${os.name}" arg2="Linux"/>    </condition>
+  <condition property="jtgt" value="-target 1.7" else="">
+    <equals arg1="${ant.java.version}" arg2="1.8"/>   
+  </condition>
+  <condition property="jsrc" value="-source 1.7" else="">
+    <equals arg1="${ant.java.version}" arg2="1.8"/>   
+  </condition>
+  <condition property="deprecation" value="-Xlint:deprecation" else="-Xlint:-deprecation">
+    <isset property="debug"/>
+  </condition>
+
+  <target name="configIfLinux" if="isLinux">
+    <!-- echo message="deprecation: ${deprecation}"/ -->
+    <condition property="appdir" value="${user.home}/app" else="/home/app">
+      <equals arg1="${env.HOSTNAME}" arg2="cheminfov.informatics.indiana.edu"/>
+    </condition>
+    <property name="datadir" location="/home/data" />
+    <presetdef name="jcompile">
+      <javac debug="true" includeantruntime="false" >
+        <compilerarg line="${jsrc}" />
+        <compilerarg line="${jtgt}" />
+        <compilerarg value="${deprecation}" />
+        <compilerarg value="-Xlint:-unchecked" />
+        <compilerarg value="-nowarn" />
+      </javac>
+    </presetdef>
+  </target>
+
+  <target name="configIfMac" if="isMac">
+    <!-- echo message="deprecation: ${deprecation}"/ -->
+    <property name="includeantruntime" value="false" /> <!-- Kludge for Mac -->
+    <property name="appdir" location="/Users/app" />
+    <property name="datadir" location="/Users/data" />
+    <presetdef name="jcompile">
+      <javac debug="true" includeantruntime="false" >
+        <compilerarg line="${jsrc}" />
+        <compilerarg line="${jtgt}" />
+        <compilerarg value="${deprecation}" />
+        <compilerarg value="-Xlint:-unchecked" />
+        <compilerarg value="-nowarn" />
+      </javac>
+    </presetdef>
+  </target>
+
+  <target name="config" depends="configIfMac,configIfLinux"
+   description="Platform-specific configuration." >
+    <property name="d2rq_dir" value="${appdir}/d2rq" />
+    <echo message="OS: ${os.name} ${os.version} [${os.arch}]" />
+    <echo message="java version: ${ant.java.version} (${java.home})"/>
+    <echo message="hostname: ${env.HOSTNAME}" />
+    <echo message="home: ${user.home}" />
+    <echo message="appdir: ${appdir}"/>
+    <echo message="${jsrc} ${jtgt}"/>
+    <echo message="To list targets: ant -p"/>
+    <property name="libdir" location="${basedir}/lib" />
+
+    <!-- dependency jars -->
+    <property name="libj2ee" location="${appdir}/lib/servlet.jar" />
+    <property name="libcos" location="${appdir}/lib/cos.jar" />
+    <property name="libaxis" location="${appdir}/lib/axis.jar" />
+    <property name="libjaxrpc" location="${appdir}/lib/jaxrpc.jar" />
+    <property name="libjson" location="${appdir}/lib/org.json.jar" />
+    <property name="libsax" location="${appdir}/lib/sax.jar" />
+
+    <!-- target jars -->
+    <property name="slap_lib" location="${libdir}/d2d_slap.jar" />
+    <property name="slap_war" location="${libdir}/slap.war" />
+ 
+  </target>
+
+  <!-- Libraries -->
+
+  <target name="slap_lib" depends="config" description="SLAP JAR">
+    <jcompile 
+      srcdir="${basedir}/com/d2discovery/slap"
+      classpath="${basedir};${libcos};${libaxis};${libjaxrpc};${libj2ee}"
+     includes="*.java" >
+    </jcompile>
+    <jar destfile="${slap_lib}" >
+      <fileset dir="${basedir}" includes="com/d2discovery/slap/*.class" />
+      <fileset dir="${basedir}" includes="com/d2discovery/slap/*.java" />
+    </jar>
+  </target>
+
+  <target name="slap_war" depends="config,slap_lib"
+	description="WAR for deployment of SLAP webapp"> 
+    <war destfile="${slap_war}" webxml="com/d2discovery/slap/web.xml">
+      <zipfileset src="${slap_lib}" includes="**/*.class" prefix="WEB-INF/classes" />
+      <zipfileset src="${slap_lib}" includes="**/*.java" prefix="WEB-INF/classes" />
+      <lib dir="${appdir}/lib" includes="axis.jar" />
+      <lib dir="${appdir}/lib" includes="jaxrpc.jar" />
+      <lib dir="${appdir}/lib" includes="log4j-1.2.16.jar" />
+      <lib dir="${appdir}/lib" includes="postgresql-9.1-903.jdbc3.jar" />
+      <lib dir="${appdir}/lib" includes="jena-core-2.11.1.jar" />
+      <lib dir="${appdir}/lib" includes="commons-discovery-0.5.jar,commons-logging-1.1.1.jar" />
+      <fileset dir="${basedir}/com/d2discovery/slap" includes="*.html" />
+      <fileset dir="${basedir}/com/d2discovery/slap" includes="*.jsp" />
+      <classes dir="${basedir}/properties" includes="*.properties" />
+      <zipfileset dir="${appdir}/cytoscapeweb/js/src" includes="*.js" prefix="js" />
+      <zipfileset dir="${appdir}/cytoscapeweb/js/min" includes="*.js" prefix="js" />
+      <zipfileset dir="${appdir}/cytoscapeweb/swf/" includes="*.swf" prefix="swf" />
+      <zipfileset dir="${basedir}/js" includes="*.js" prefix="js" />
+      <zipfileset dir="${basedir}/css" includes="*.css" prefix="css" />
+      <zipfileset dir="${basedir}/images" prefix="images" />
+      <manifest>
+        <attribute name="Author" value="${myname}" />
+        <attribute name="Organization" value="${org}" />
+        <attribute name="Builder" value="${user.name}" />
+        <attribute name="Date" value="${timestamp}" />
+      </manifest>
+    </war>
+    <echo message="SLAP WAR, includes dependencies." />
+    <echo message="File: ${slap_war}" />
+    <echo message="Author: ${myname}" />
+    <echo message="Organization: Data2Discovery" />
+    <echo message="Builder: ${user.name}" />
+    <echo message="Date: ${timestamp}" />
+  </target>
+
+  <target name="clean" description="Clean all classes, JARs, WARs, javadocs." >
+    <delete>
+      <fileset dir="${basedir}" includes="**/*.class"/>
+      <fileset dir="${basedir}" includes="**/*.jar"/>
+      <fileset dir="${basedir}" includes="**/*.war"/>
+    </delete>
+    <delete dir="${basedir}/lib" />
+  </target>
+
+</project>
+

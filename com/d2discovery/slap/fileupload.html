@@ -1,0 +1,20 @@
+<html><body>
+<form enctype="multipart/form-data" action="http://cheminfov.informatics.indiana.edu/cgi-bin/slap/save_file.py" method="post">
+<p>We support batch compound protein (drug target prediction), Currently only support 
+at most 500 pairs. It takes approximately 2 min to finish 500 pairs using the default input format. Other input formats take much longer.</p>
+<p>File: <input type="file" name="file"></p>
+<p><input type="submit" value="Upload"></p>
+<p>Please follow the instructions to prepare the input file.</p>
+The default format:
+<br>
+The columns in the input file are CID, gene symbol using Tab as delimiter. (<a href="http://cheminfov.informatics.indiana.edu:8080/slap/temp/sample_default.txt">sample 
+file</a>)<br>Other inputs formats:
+<br>The columns in the input file are Compound(CID,Name or SMILES), Target(Gene symbol, Name or Uniprot ID) using Tab as delimiter. 
+(<a href="http://cheminfov.informatics.indiana.edu:8080/slap/temp/sample_others.txt">sample 
+file</a>)<p>The columns in the output file are compound, protein, association score, p 
+value and type. (<a href="http://cheminfov.informatics.indiana.edu:8080/slap/temp/sample_others.txt.slap">sample 
+results</a>)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</form>
+</body></html>

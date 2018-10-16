@@ -1,0 +1,29 @@
+<HTML>
+<BODY>
+<h1>SLAP, Semantically Linked Association Prediction </h1>
+<p>
+<b>Original authors: Bin Chen, Qian Zhu</b>
+</p>
+This package has been adapted and organized from the code developed at the <a href="http://ccrg.soic.indiana.edu/">Cheminformatics and Chemogenomics Research Group</a>, led by David Wild, at Indiana University.
+<a href="http://www.d2discovery.com/">Data2Discovery Inc.</a> has been founded by David Wild and Ying Ding to 
+sustain, extend, distribute and commercialize SLAP and related methods.
+<p>
+Some aims of this newly organized package:
+<ul>
+<li>Encapsulate code for convenient deployment via J2EE web app (via WAR).
+<li>Employ context and servlet configuration parameters (via web.xml) to removed hard-coded hostname, db-name, etc.
+</ul>
+</p>
+<p>
+Note that this package accesses the Chem2Bio2RDF PostgreSQL database directly via JDBC (normally port 5432),
+and the SLAP REST API (normally port 80).
+</p>
+<H3>References</H3>
+<OL>
+<LI><a href="http://chem2bio2rdf.org/slap">Public SLAP web app</a>.
+<LI><a href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1002574">Chen, B. et al., PLoS Computational Biology, 2012, 8(7), e1002574</a>
+</OL>
+
+@author	Bin Chen, Qian Zhu, Jeremy Yang
+</BODY>
+</HTML>
