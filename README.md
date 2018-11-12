@@ -1,3 +1,3 @@
-# SLAP
+# SLAP-UI
 
-* Initially only the SLAP webapp code selected, copied and slightly modified from IU development and deployment environment.
+* SLAP webapp code, copied and slightly modified from IU development and deployment environment.
