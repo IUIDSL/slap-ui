@@ -1,0 +1,35 @@
+pattern	weight	sd	count
+ http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/hprd/resource/tissue http://chem2bio2rdf.org/hprd/resource/tissue	-11.5285636996951	1.56610446058082	8724
+ http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics	-15.2108364603	1.3030383483058	1666636
+ http://chem2bio2rdf.org/substructure http://chem2bio2rdf.org/substructure http://chem2bio2rdf.org/chemogenomics/resource/expression	-10.3349899737147	0.983840607520252	17558
+ http://chem2bio2rdf.org/substructure http://chem2bio2rdf.org/substructure http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics	-11.4175367579706	1.38287304462849	73134
+ http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/uniprot/resource/GO_ID http://chem2bio2rdf.org/uniprot/resource/GO_ID	-12.6937770474201	1.64585301277049	103029
+ http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics	-12.2859098926391	1.33571416205157	82369
+ http://chem2bio2rdf.org/omim/resource/drug http://chem2bio2rdf.org/omim/resource/drug http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics	-8.39490705966962	1.38672652126497	3529
+ http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/kegg/resource/protein http://chem2bio2rdf.org/kegg/resource/protein	-10.3249604249535	1.26118898583048	18030
+ http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/kegg/resource/protein http://chem2bio2rdf.org/kegg/resource/protein	-10.9862334223623	1.38625986699284	37626
+ http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/chemogenomics/resource/expression	-13.2815507443118	1.67236053890359	33172
+ http://chem2bio2rdf.org/sider/resource/cid http://chem2bio2rdf.org/sider/resource/cid http://chem2bio2rdf.org/chemogenomics/resource/expression	-11.4428964634103	1.05896511574866	5240
+ http://chem2bio2rdf.org/omim/resource/drug http://chem2bio2rdf.org/omim/resource/gene	-3.52315055977981	0.742199953203163	107
+ http://chem2bio2rdf.org/omim/resource/drug http://chem2bio2rdf.org/omim/resource/gene http://chem2bio2rdf.org/hprd	-6.42607476652351	1.24465341256855	555
+ http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/uniprot/resource/GO_ID http://chem2bio2rdf.org/uniprot/resource/GO_ID	-11.7470069999196	1.39689190009952	41242
+ http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/chemogenomics/resource/expression	-11.1528730028725	1.22154662862247	30084
+ http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics	-11.6073715865113	1.45786094675193	13233
+ http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/chemogenomics/resource/expression	-11.2186092848667	1.31538434387529	4192
+ http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/chemogenomics/resource/expression	-11.5276741410425	1.38484317920602	29412
+ http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics	-12.3080486683078	1.60270475456616	12390
+ http://chem2bio2rdf.org/chebi http://chem2bio2rdf.org/chebi http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics	-12.1400747430338	1.37726166945425	85583
+ http://chem2bio2rdf.org/chebi http://chem2bio2rdf.org/chebi http://chem2bio2rdf.org/chemogenomics/resource/expression	-10.7886806326107	0.964270261703604	19774
+ http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/hprd http://chem2bio2rdf.org/hprd	-10.2560025921361	1.32654261818244	8680
+ http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/hprd	-6.61253527858734	1.12812375788466	402
+ http://chem2bio2rdf.org/sider/resource/cid http://chem2bio2rdf.org/sider/resource/cid http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics	-13.1682846123516	1.27926597786063	28234
+ http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/hprd/resource/tissue http://chem2bio2rdf.org/hprd/resource/tissue	-10.3928413855305	1.08757422151561	4244
+ http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/hgnc/resource/Gene_Family_Name http://chem2bio2rdf.org/hgnc/resource/Gene_Family_Name	-7.89401016987891	1.12337901660124	542
+ http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/hprd http://chem2bio2rdf.org/hprd	-10.9397612605541	1.5952624628395	13183
+ http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/hgnc/resource/Gene_Family_Name http://chem2bio2rdf.org/hgnc/resource/Gene_Family_Name	-8.09092058102158	1.59986800427777	1422
+ http://chem2bio2rdf.org/omim/resource/drug http://chem2bio2rdf.org/omim/resource/drug http://chem2bio2rdf.org/chemogenomics/resource/expression	-7.05120238634603	1.11698592430886	657
+ http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/hprd	-7.11279177492441	1.46803655023993	549
+ http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics	-4.50792914935602	1.12177884113623	279
+ http://chem2bio2rdf.org/chemogenomics/resource/expression http://chem2bio2rdf.org/omim/resource/gene http://chem2bio2rdf.org/omim/resource/gene	-7.09512071614528	1.3300012267728	180
+ http://chem2bio2rdf.org/chemogenomics/resource/chemogenomics http://chem2bio2rdf.org/omim/resource/gene http://chem2bio2rdf.org/omim/resource/gene	-7.59643443701997	1.45351531193704	314
+ http://chem2bio2rdf.org/chemogenomics/resource/expression	-3.31992401022441	0.766015120769345	59
