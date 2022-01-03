@@ -1,4 +1,4 @@
-package com.d2discovery.slap;
+package edu.indiana.sice.idsl.slap;
 
 /* Location:           /home/jjyang/Downloads/slap/WEB-INF/classes/
  * Qualified Name:     Prediction.Test

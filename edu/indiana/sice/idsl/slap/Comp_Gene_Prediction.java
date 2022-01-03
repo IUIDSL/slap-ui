@@ -1,4 +1,4 @@
-package com.d2discovery.slap;
+package edu.indiana.sice.idsl.slap;
 
 import java.io.BufferedReader;
 import java.io.IOException;

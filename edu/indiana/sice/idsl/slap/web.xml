@@ -4,13 +4,13 @@
   xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
   version="2.4">
 
-  <display-name>Data2Discovery Web Apps</display-name>
-  <description>Data2Discovery Web Apps</description>
+  <display-name>SLAP Web App</display-name>
+  <description>SLAP Web App</description>
 
   <!-- Defined as context-params, so available to all servlets. And JSPs?? -->
   <context-param>
     <param-name>API_HOST</param-name> <!-- SLAP REST API host -->
-      <param-value>cheminfov.informatics.indiana.edu</param-value>
+      <param-value>cheminfov.luddy.indiana.edu</param-value>
   </context-param>
   <context-param>
     <param-name>API_BASE_PATH</param-name> <!-- SLAP REST API base path -->
@@ -18,7 +18,7 @@
   </context-param>
   <context-param>
     <param-name>DBHOST</param-name> <!-- PostgreSQL Db host -->
-      <param-value>cheminfov.informatics.indiana.edu</param-value>
+      <param-value>cheminfov.luddy.indiana.edu</param-value>
   </context-param>
   <context-param>
     <param-name>DBPORT</param-name> <!-- PostgreSQL Db port -->
@@ -43,7 +43,7 @@
 
   <servlet>
     <servlet-name>slap</servlet-name>
-    <servlet-class>com.d2discovery.slap.Semantic_Link_Association_Prediction</servlet-class>
+    <servlet-class>edu.indiana.sice.idsl.slap.Semantic_Link_Association_Prediction</servlet-class>
     <!-- init-param><param-name>DBHOST</param-name -->
       <!-- param-value>cheminfov.informatics.indiana.edu</param-value></init-param -->
     <!-- init-param><param-name>DBSCHEMA</param-name -->
@@ -64,7 +64,7 @@
   <description>SLAP J2EE component</description>
   <display-name>SLAP J2EE component</display-name>
   <servlet-name>Semantic_Link_Association_Prediction</servlet-name>
-  <servlet-class>com.d2discovery.slap.Semantic_Link_Association_Prediction</servlet-class>
+  <servlet-class>edu.indiana.sice.idsl.slap.Semantic_Link_Association_Prediction</servlet-class>
  </servlet>
  <servlet-mapping>
   <servlet-name>Semantic_Link_Association_Prediction</servlet-name>
@@ -73,7 +73,7 @@
 
  <servlet>
   <servlet-name>TraceUserFeedback</servlet-name>
-  <servlet-class>com.d2discovery.slap.TraceUserFeedback</servlet-class>
+  <servlet-class>edu.indiana.sice.idsl.slap.TraceUserFeedback</servlet-class>
  </servlet>
  <servlet-mapping>
   <servlet-name>TraceUserFeedback</servlet-name>
@@ -82,7 +82,7 @@
 
  <servlet>
   <servlet-name>RetrieveData</servlet-name>
-  <servlet-class>com.d2discovery.slap.RetrieveData</servlet-class>
+  <servlet-class>edu.indiana.sice.idsl.slap.RetrieveData</servlet-class>
  </servlet>
  <servlet-mapping>
   <servlet-name>RetrieveData</servlet-name>
