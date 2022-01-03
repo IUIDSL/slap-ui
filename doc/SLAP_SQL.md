@@ -1,10 +1,9 @@
-﻿SLAP SQL
-
+# ﻿SLAP SQL
 
 From odbc6.py:
 
+## getGeneByName(name)
 
-getGeneByName(name)
 * "SELECT gene_symbol FROM c2b2r_chembl_08_target_dictionary WHERE UPPER(pref_name) = UPPER('"+name+"')"
 * "SELECT \"Approved_Symbol\" FROM \"c2b2r_HGNC\" WHERE UPPER(\"Approved_Name\") = UPPER('"+name+"')"
 getGeneByGI(gi)
@@ -32,10 +31,8 @@ cidNetwork(cid)
 cidNetwork(gene)
 * 'SELECT \"CID\" FROM c2b2r_chemogenomics where primary_source!=\' CTD \' and med_interested=1 and \"GENE\"=\''+gene+'\' limit 100'
 
+## Tables:
 
-
-
-Tables:
 1. c2b2r_chembl_08_target_dictionary
 2. c2b2r_chemogenomics
 3. c2b2r_compound_new
