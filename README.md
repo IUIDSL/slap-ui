@@ -3,3 +3,13 @@
 * SLAP webapp code, initially copied from IU development and deployment
 environment on cheminfov.informatics.indiana.edu, as developed primarily
 by Bin Chen.
+
+## Dependencies
+
+See [documentation](doc).
+
+## Compiling
+
+```
+mvn clean package
+```
