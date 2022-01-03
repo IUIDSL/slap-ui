@@ -4,21 +4,21 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>unmbiocomputing</groupId>
-    <artifactId>hscaf</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <groupId>IUIDSL</groupId>
+    <artifactId>slap-ui</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>hscaf_war</artifactId>
+  <artifactId>slap_war</artifactId>
   <packaging>war</packaging>
-  <name>HSCAF_WAR</name>
+  <name>SLAP_WAR</name>
   <description>Maven sub-module to generate WAR-file.</description>
 
   <dependencies>
     <dependency> <!-- Others via transitive -->
-      <groupId>unmbiocomputing</groupId>
-      <artifactId>unm_biocomp_hscaf</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <groupId>IUIDSL</groupId>
+      <artifactId>slap_jar</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
   

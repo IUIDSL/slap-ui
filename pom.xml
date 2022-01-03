@@ -3,13 +3,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>unmbiocomputing</groupId>
-  <artifactId>hscaf</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <groupId>IUIDSL</groupId>
+  <artifactId>slap-ui</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>HSCAF</name>
-  <description>HScaf apps, servlets, libs, and external dependencies ready for deployment via WAR-file.</description>
-  <url>https://github.com/unmtransinfo/unm_biocomp_hscaf</url>
+  <name>SLAP-UI</name>
+  <description>SLAP-UI apps, libs, and external dependencies ready for deployment via WAR-file.</description>
+  <url>https://github.com/IUIDSL/slap-ui</url>
+
+  <profiles>
+    <profile>
+      <id>iuidsl</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>maven-repository</id>
+          <name>Maven Repo, via HTTP</name>
+          <url>https://repo.maven.org/maven2/</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,8 +33,8 @@
   </properties>
 
   <modules>
-    <module>unm_biocomp_hscaf</module>
-    <module>hscaf_war</module>
+    <module>slap_jar</module>
+    <module>slap_war</module>
   </modules>
 
 </project>
